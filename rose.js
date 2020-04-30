@@ -20,10 +20,9 @@ class Rose {
     // this.center = random(colorArray.length);
     this.ran = random(-4);
     this.offset = random(-1, 1)
-  }
-
-  // Display the flower
-  display() {
+    this.canvas = createGraphics(this.wh, this.wh);
+    this.canvas.pixelDensity(2);
+    ///this is where we start to draw the flowers
     let genes = this.dna.genes;
 
     //creates the shape for the flower
@@ -56,56 +55,45 @@ class Rose {
     let r_center = map(genes[5], 0, 1, 4, 30) + (this.ran) * 5;
 
 
-    push();
-    translate(this.x, this.y);
+    this.canvas.push();
+    this.canvas.translate(this.wh / 2, this.wh / 2)
+    // this.canvas.background(0, 10);
+    // this.canvas.translate(this.x, this.y);
+    // imageMode(CENTER);
     let k = n / d;
 
-    blendMode(OVERLAY);
-    stroke(c_stroke);
-    strokeWeight(size_stroke);
+    this.canvas.blendMode(OVERLAY);
+    this.canvas.stroke(c_stroke);
+    this.canvas.strokeWeight(size_stroke);
+    // this.canvas.noStroke();
+    this.canvas.blendMode(BLEND);
+    this.canvas.fill(petal_color);
 
-    blendMode(BLEND);
-    fill(petal_color);
-
-    beginShape();
+    this.canvas.beginShape();
     for (let a = 0; a < TWO_PI * d; a += .01) {
-      // let xoff = map(cos(ani), -1, 1, 0, .5);
-      // let yoff = map(sin(ani), -1, 1, 0, .2);
-      // let zoff = map(sin(ani), -1, 1, 0, 1);
-      // let radius = (30 * noise(xoff, yoff)) * cos(k * a);
       let radius = this.size * cos(k * a);
       let x = radius * cos(a);
       let y = radius * sin(a);
-      vertex(x, y);
+      this.canvas.vertex(x, y);
     }
-    endShape();
+    this.canvas.endShape();
 
-    blendMode(OVERLAY);
-    ellipseMode(CENTER);
-    noStroke();
-    fill(c_stroke);
-    ellipse(0, 0, r_center);
-
-    //     console.log(otherColor);
-    //     console.log(c_stroke);
-
-    // if (this.rolloverOn) {
-    //   console.log(n);
-    //   console.log(d);
-    // } else {
-    // 
-    // }
+    this.canvas.blendMode(OVERLAY);
+    this.canvas.ellipseMode(CENTER);
+    this.canvas.fill(c_stroke);
+    this.canvas.ellipse(0, 0, r_center);
+    this.canvas.pop();
 
 
-    // Draw the bounding box
-    // noFill();
-    // blendMode(BLEND);
-    // stroke(0.25);
-    // strokeWeight(.5);
 
-    // rectMode(CENTER);
-    // rect(0, 0, this.wh, this.wh);
+  }
 
+  // Display the flower
+  display() {
+    push();
+    translate(this.x, this.y);
+    imageMode(CENTER);
+    image(this.canvas, 0, 0);
     pop();
 
     // Display fitness value

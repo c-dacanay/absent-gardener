@@ -24,6 +24,8 @@ class Population {
 
   // Display all roses
   display() {
+    // let rose = floor(random(this.population.length));
+    // this.population[0].display();
     for (var i = 0; i < this.population.length; i++) {
       this.population[i].display();
     }
