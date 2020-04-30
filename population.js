@@ -18,7 +18,7 @@ class Population {
     this.size = size;
     this.dna = new DNA()
     for (var i = 0; i < num; i++) {
-      this.population[i] = new Rose(this.dna, 50 + i * (size * 2 + 5), 60, this.size);
+      this.population[i] = new Rose(this.dna, 50 + i * (size * 2 + 10), 60, this.size);
     }
   }
 

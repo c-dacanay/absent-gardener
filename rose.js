@@ -60,9 +60,11 @@ class Rose {
     translate(this.x, this.y);
     let k = n / d;
 
-    // blendMode(MULTIPLY);
+    blendMode(OVERLAY);
     stroke(c_stroke);
     strokeWeight(size_stroke);
+
+    blendMode(BLEND);
     fill(petal_color);
 
     beginShape();
@@ -78,7 +80,7 @@ class Rose {
     }
     endShape();
 
-    // blendMode(OVERLAY);
+    blendMode(OVERLAY);
     ellipseMode(CENTER);
     noStroke();
     fill(c_stroke);
@@ -114,6 +116,7 @@ class Rose {
   }
 
   getFitness() {
+    this.fitness = random(0, 1);
     return this.fitness;
   }
 
