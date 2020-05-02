@@ -9,7 +9,7 @@
 // Create a new face
 class Rose {
   constructor(dna_, x_, y_, size_) {
-    this.rolloverOn = false; // Are we rolling over this face?
+    // this.rolloverOn = false; // Are we rolling over this face?
     this.dna = dna_; // rose's DNA
     this.x = x_; // Position on screen
     this.y = y_;
@@ -21,6 +21,7 @@ class Rose {
     this.ran = random(-4);
     this.offset = random(-1, 1)
     this.canvas = createGraphics(this.wh, this.wh);
+    // this.canvas = createGraphics(this.size, this.size);
     this.canvas.pixelDensity(2);
     ///this is where we start to draw the flowers
     let genes = this.dna.genes;
@@ -56,10 +57,11 @@ class Rose {
 
 
     this.canvas.push();
-    this.canvas.translate(this.wh / 2, this.wh / 2)
+    //damn it. incredible.
+    this.canvas.translate(this.size, this.size)
     // this.canvas.background(0, 10);
     // this.canvas.translate(this.x, this.y);
-    // imageMode(CENTER);
+    imageMode(CENTER);
     let k = n / d;
 
     this.canvas.blendMode(OVERLAY);
@@ -71,7 +73,7 @@ class Rose {
 
     this.canvas.beginShape();
     for (let a = 0; a < TWO_PI * d; a += .01) {
-      let radius = this.size * cos(k * a);
+      let radius = this.size / 2 * cos(k * a);
       let x = radius * cos(a);
       let y = radius * sin(a);
       this.canvas.vertex(x, y);
@@ -91,7 +93,7 @@ class Rose {
   // Display the flower
   display() {
     push();
-    // translate(this.x, this.y);
+    translate(this.x, this.y);
     imageMode(CENTER);
     image(this.canvas, 0, 0);
     pop();
