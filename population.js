@@ -16,6 +16,7 @@ class Population {
     this.matingPool = [];
     this.generations = 0; // Number of generations
     this.size = size;
+    this.flower = 3;
     this.dna = new DNA()
     for (var i = 0; i < num; i++) {
       this.population[i] = new Rose(this.dna, 50 + i * (size * 2 + 10), 60, this.size);
@@ -29,6 +30,15 @@ class Population {
     for (var i = 0; i < this.population.length; i++) {
       this.population[i].display();
     }
+  }
+
+  displayGrid() {
+    // let rose = floor(random(this.population.length));
+    // this.population[2].display();
+    // for (var i = 0; i < flowerArr.length; i++) {
+    // console.log(this.flower);
+    this.population[this.flower].display();
+    // }
   }
 
   // Are we rolling over any of the faces?

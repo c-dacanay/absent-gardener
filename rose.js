@@ -16,7 +16,7 @@ class Rose {
     this.wh = size_ * 2; // Size of square enclosing face
     this.fitness = 1;
     this.size = size_;
-    this.r = new Rectangle(this.x - this.wh / 2, this.y - this.wh / 2, this.wh, this.wh);
+    // this.r = new Rectangle(this.x - this.wh / 2, this.y - this.wh / 2, this.wh, this.wh);
     // this.center = random(colorArray.length);
     this.ran = random(-4);
     this.offset = random(-1, 1)
@@ -91,7 +91,7 @@ class Rose {
   // Display the flower
   display() {
     push();
-    translate(this.x, this.y);
+    // translate(this.x, this.y);
     imageMode(CENTER);
     image(this.canvas, 0, 0);
     pop();
@@ -113,15 +113,15 @@ class Rose {
   }
 
   // Increment fitness if mouse is rolling over face
-  rollover(mx, my) {
-    if (this.r.contains(mx, my)) {
-      // this.rolloverOn = true;
-      return true;
-      console.log(mx, my);
-      // this.fitness += 0.25;
-    } else {
-      return false;
-      // this.rolloverOn = false;
-    }
-  }
+  // rollover(mx, my) {
+  // if (this.r.contains(mx, my)) {
+  // this.rolloverOn = true;
+  // return true;
+  // console.log(mx, my);
+  // this.fitness += 0.25;
+  // } else {
+  // return false;
+  // this.rolloverOn = false;
+  // }
+  // }
 }

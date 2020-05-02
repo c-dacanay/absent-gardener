@@ -12,20 +12,24 @@
 
 let populations = [];
 let grid = [];
-let numPops = 5;
+let popArr = [];
+let flowerArr = [];
+let newGarden = true;
+let numPops = 4;
+let gardenSize = 10;
 let info;
-let size = 25;
+let cellSize = 25;
+let popmax = 12;
 let colorArray =
   ["#69d2e7", "#a7dbd8", "#e0e4cc", "#f38630", "#fa6900", "#fe4365", "#fc9d9a", "#f9cdad", "#c8c8a9", "#83af9b", "#ecd078", "#d95b43", "#c02942", "#542437", "#53777a", "#556270", "#4ecdc4", "#c7f464", "#ff6b6b", "#c44d58", "#774f38", "#e08e79", "#f1d4af", "#ece5ce", "#c5e0dc", "#e8ddcb", "#cdb380", "#036564", "#033649", "#031634", "#490a3d", "#bd1550", "#e97f02", "#f8ca00", "#8a9b0f"]
 
 function setup() {
   createCanvas(windowWidth / 2, windowHeight);
   // colorMode(RGB, 1.0, 1.0, 1.0, 1.0);
-  let popmax = 12;
   let mutationRate = 0.01;
 
   for (let i = 0; i < numPops; i++) {
-    populations.push(new Population(mutationRate, popmax, size))
+    populations.push(new Population(mutationRate, popmax, cellSize))
   }
   // console.log(populations);
   button = createButton("evolve new generation");
@@ -34,52 +38,64 @@ function setup() {
   info = createDiv('');
   info.position(20, 950);
   textAlign(CENTER, CENTER);
+
+  drawGarden();
+
 }
 
 function draw() {
   ///display the grid
-  // let gridsize = size * 3;
   background(200);
-  // translate(size / 2, size / 2)
+  translate(cellSize / 2, cellSize / 2)
 
-  // for (let y = 0; y < 10; y++) {
-  //   for (let x = 0; x < 10; x++) {
-  //     let xpos = x * gridsize;
-  //     let ypos = y * gridsize;
+  let gridsize = cellSize * 2.5;
+  for (let y = 0; y < gardenSize; y++) {
+    for (let x = 0; x < gardenSize; x++) {
+      let xpos = x * gridsize;
+      let ypos = y * gridsize;
 
-  //     let index = y * 10 + x; //find the index
+      let index = y * 10 + x; //find the index
 
-  //     if (hover(xpos, ypos, gridsize, gridsize)) {
-  //       fill(255, 0, 0);
-  //     } else {
-  //       fill(255);
-  //     }
-  //     stroke(0);
-  //     rect(xpos, ypos, gridsize, gridsize);
-  //     text(grid[index], xpos, ypos, gridsize, gridsize);
+      if (hover(xpos, ypos, gridsize, gridsize)) {
+        fill(0, 255, 0);
+      } else {
+        fill(255);
+      }
+      stroke(0, 20);
+      rect(xpos, ypos, gridsize, gridsize);
+      text(grid[index], xpos, ypos, gridsize, gridsize);
+      //for every cell, decide if there's going to be a flower
+      //
+      push()
+      //center within the square
+      translate(xpos + gridsize / 2, ypos + gridsize / 2);
+      populations[popArr[x]].displayGrid();
+      pop();
 
-  //     push()
-  //     translate(xpos - size / 2, ypos - size);
-  //     populations[0].display(y);
-  //     pop();
-
-  //   }
-  // }
-
-  // display all the roses!
-  for (let i = 0; i < numPops; i++) {
-    push();
-    translate(0, size + 20 * (i * 3));
-    populations[i].display();
-    populations[i].rollover(mouseX, mouseY);
-
-    pop();
+    }
   }
 
+  // // display all the roses!
+  // for (let i = 0; i < numPops; i++) {
+  //   push();
+  //   translate(0, size + 20 * (i * 3));
+  //   populations[i].display();
+  //   populations[i].rollover(mouseX, mouseY);
 
+  //   pop();
+  // }
   info.html("Generation #:" + populations[0].getGenerations());
 }
 
+function drawGarden() {
+  for (let i = 0; i < gardenSize; i++) {
+    popArr.push(floor(random(0, numPops)));
+    for (let f = 0; f < gardenSize; f++) {
+      flowerArr.push(floor(random(0, popmax)))
+    }
+    console.log(flowerArr);
+  }
+}
 
 function hover(x, y, w, h) {
   if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
