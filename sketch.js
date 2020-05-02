@@ -41,7 +41,7 @@ function setup() {
     }
   }
 
-  console.log(grid);
+  // console.log(grid);
 
 
   // for (let i = 0; i < numPops; i++) {
@@ -61,38 +61,6 @@ function draw() {
     }
   }
 
-
-  //old code :,)
-  // translate(cellSize / 2, cellSize / 2)
-
-  // let gridsize = cellSize * 2.5;
-  // for (let y = 0; y < gardenSize; y++) {
-  //   for (let x = 0; x < gardenSize; x++) {
-  //     let xpos = x * gridsize;
-  //     let ypos = y * gridsize;
-
-  //     let index = y * 10 + x; //find the index
-
-  //     if (hover(xpos, ypos, gridsize, gridsize)) {
-  //       fill(0, 255, 0);
-  //     } else {
-  //       fill(255);
-  //     }
-  //     stroke(0, 20);
-  //     rect(xpos, ypos, gridsize, gridsize);
-  //     // text(grid[index], xpos, ypos, gridsize, gridsize);
-  //     //for every cell, decide if there's going to be a flower
-  //     //
-  //     push()
-  //     //center within the square
-  //     translate(xpos + gridsize / 2, ypos + gridsize / 2);
-  //     populations[popArr[x]].displayGrid();
-  //     pop();
-
-  //   }
-  // }
-
-  // info.html("Generation #:" + populations[0].getGenerations());
 }
 
 function drawGarden() {
