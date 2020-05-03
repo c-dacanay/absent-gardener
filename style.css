@@ -12,16 +12,27 @@ html {
 }
 body {
   font-family: "Inconsolata", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 h1 {
   font-family: "Roboto Slab", serif;
-  font-size: 40px;
-  letter-spacing: 3px;
-  /* font-weight: 700; */
+  font-size: 5rem;
+  letter-spacing: 0.1rem;
+  line-height: 5rem;
+  text-align: center;
   text-transform: uppercase;
 }
+
+#the {
+  font-size: 2.5rem;
+  vertical-align: top;
+}
+
+.debug {
+  border: 1px solid red;
+}
+
 .row {
   margin-top: 7rem;
   display: flex;
@@ -38,17 +49,25 @@ h1 {
   width: 35%;
   margin-left: 2rem;
   margin-right: 10%;
+  flex-direction: column;
 }
-/* .debug {
-  border: 1px solid red;
-} */
 
 .garden {
   width: 35%;
-  /* margin: 2rem; */
   margin-left: 15%;
 }
 
+.header {
+  align-content: center;
+  width: 100%;
+}
+
+.info {
+  margin-top: 2rem;
+  width: 100%;
+  /* display: flex;
+  flex: 1; */
+}
 /* @keyframes slidein {
   from {
     margin-left: 90%;
