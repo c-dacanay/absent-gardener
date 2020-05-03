@@ -1,4 +1,47 @@
-html, body {
-  margin: 0;
+*,
+*::after,
+*::before {
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font-size: 16px;
+  background-color: #fff7e4;
+}
+body {
+  font-family: "Inconsolata", sans-serif;
+  font-size: 25px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  /* vertical-align: top; */
+}
+.debug {
+  border: 1px solid red;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 90%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
 }

@@ -25,7 +25,7 @@ let counter = 0;
 let w = 50;
 
 function setup() {
-  createCanvas(windowWidth / 2, windowHeight);
+  createCanvas(601, 601);
   let mutationRate = 0.04;
 
   //make the garden beds
