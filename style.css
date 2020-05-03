@@ -8,11 +8,11 @@
 html {
   height: 100%;
   font-size: 16px;
-  background-color: #fff7e4;
+  background-color: #ffffff;
 }
 body {
   font-family: "Inconsolata", sans-serif;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 h1 {
@@ -29,9 +29,9 @@ h1 {
   vertical-align: top;
 }
 
-.debug {
+/* .debug {
   border: 1px solid red;
-}
+} */
 
 .row {
   margin-top: 7rem;
@@ -47,9 +47,10 @@ h1 {
 
 .content {
   width: 35%;
-  margin-left: 2rem;
+  margin-left: 4rem;
   margin-right: 10%;
   flex-direction: column;
+  /* text-align: center; */
 }
 
 .garden {
@@ -65,15 +66,52 @@ h1 {
 .info {
   margin-top: 2rem;
   width: 100%;
-  /* display: flex;
-  flex: 1; */
+  /* text-align: center; */
 }
-/* @keyframes slidein {
-  from {
-    margin-left: 90%;
-  }
 
-  to {
-    margin-left: 0%;
-  } */
-/* } */
+.button {
+  font-family: "Inconsolata", sans-serif;
+  color: #ffffff;
+  font-size: 18px;
+  text-transform: uppercase;
+  width: 2rem;
+  max-width: 500px;
+  min-width: 180px;
+  height: 50px;
+  border-radius: 2px;
+  border: solid;
+  top: 25%;
+  bottom: 25%;
+  right: 33%;
+  left: 33%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  background-color: #4d4647;
+  display: block;
+}
+
+.color-tran {
+  /* color: #4F4F4F; */
+  color: #ffffff;
+  -webkit-transition: color 0.25s ease-out;
+  -moz-transition: color 0.25s ease-out;
+  -o-transition: color 0.25s ease-out;
+  transition: color 0.25s ease-out;
+}
+
+.color-tran:hover {
+  color: #000000;
+}
+
+.bg-tran {
+  background-color: #4f4f4f;
+  -webkit-transition: background-color 0.25s ease-out;
+  -moz-transition: background-color 0.25s ease-out;
+  -o-transition: background-color 0.25s ease-out;
+  transition: background-color 0.25s ease-out;
+}
+
+.bg-tran:hover {
+  background-color: transparent;
+}
