@@ -8,7 +8,8 @@ class Bed {
     this.fill = 255;
     if (random(1) < 0.5) {
       this.flower = true;
-      this.bloom = new Rose(this.dna, this.x + w * 0.5, this.y + w * 0.5, w * .8)
+      this.pop = floor(random(numPops));
+      this.bloom = floor(random(popmax));
     } else {
       this.flower = false;
     }
@@ -26,7 +27,12 @@ class Bed {
     }
 
     if (this.flower) {
-      this.bloom.display();
+
+      push();
+      translate(this.x + w / 2, this.y + w / 2)
+      //pick a flower randomly from the array of populations
+      populations[this.pop].population[this.bloom].display();
+      pop();
     }
 
   }

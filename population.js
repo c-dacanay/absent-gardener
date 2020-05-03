@@ -15,11 +15,11 @@ class Population {
     this.population = []; // array to hold the current population
     this.matingPool = [];
     this.generations = 0; // Number of generations
-    this.size = size;
+    // this.size = size;
     // this.flower = 3;
     this.dna = new DNA()
     for (var i = 0; i < num; i++) {
-      this.population[i] = new Rose(this.dna, 50 + i * (size * 2 + 10), 60, this.size);
+      this.population[i] = new Rose(this.dna, this.x + w * 0.5, this.y + w * 0.5, w * .8);
     }
   }
 

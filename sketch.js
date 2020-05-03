@@ -3,7 +3,7 @@ let populations = [];
 // let popArr = [];
 // let flowerArr = [];
 let newGarden = true;
-let numPops = 4;
+let numPops = 2;
 let gardenSize = 10;
 let info;
 let cellSize = 25;
@@ -39,10 +39,18 @@ function setup() {
   for (let i = 0; i < numPops; i++) {
     populations.push(new Population(mutationRate, popmax));
   }
+
+  console.log(populations[0].population[1]);
 }
 
 function draw() {
 
+  // let pop = floor(random(numPops));
+  // let stem = floor(random(popmax));
+  // let bloom = populations[pop].population[stem];
+  // console.log(bloom);
+
+  // bloom.display();
   //display the grid
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
