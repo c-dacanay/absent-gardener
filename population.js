@@ -10,13 +10,13 @@
 
 // Create the population
 class Population {
-  constructor(m, num, size) {
+  constructor(m, num) {
     this.mutationRate = m; // Mutation rate
     this.population = []; // array to hold the current population
     this.matingPool = [];
     this.generations = 0; // Number of generations
     this.size = size;
-    this.flower = 3;
+    // this.flower = 3;
     this.dna = new DNA()
     for (var i = 0; i < num; i++) {
       this.population[i] = new Rose(this.dna, 50 + i * (size * 2 + 10), 60, this.size);
@@ -24,33 +24,33 @@ class Population {
   }
 
   // Display all roses
-  display() {
-    // let rose = floor(random(this.population.length));
-    // this.population[0].display();
-    for (var i = 0; i < this.population.length; i++) {
-      this.population[i].display();
-    }
-  }
+  // display() {
+  // let rose = floor(random(this.population.length));
+  // this.population[0].display();
+  //   for (var i = 0; i < this.population.length; i++) {
+  //     this.population[i].display();
+  //   }
+  // }
 
-  displayGrid() {
-    // let rose = floor(random(this.population.length));
-    // this.population[2].display();
-    // for (var i = 0; i < flowerArr.length; i++) {
-    // console.log(this.flower);
-    this.population[this.flower].display();
-    // }
-  }
+  // displayGrid() {
+  // let rose = floor(random(this.population.length));
+  // this.population[2].display();
+  // for (var i = 0; i < flowerArr.length; i++) {
+  // console.log(this.flower);
+  // this.population[this.flower].display();
+  // }
+  // }
 
   // Are we rolling over any of the faces?
-  rollover(mx, my) {
-    for (var i = 0; i < this.population.length; i++) {
-      let roll = this.population[i].rollover(mx, my);
+  // rollover(mx, my) {
+  //   for (var i = 0; i < this.population.length; i++) {
+  //     let roll = this.population[i].rollover(mx, my);
 
-      if (roll) {
-        return true;
-      }
-    }
-  }
+  //     if (roll) {
+  //       return true;
+  //     }
+  //   }
+  // }
 
   // Generate a mating pool
   selection() {
