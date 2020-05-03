@@ -73,6 +73,7 @@ function newGarden() {
     }
   }
 }
+
 // If the button is clicked, evolve next generation
 function nextGen() {
   for (let i = 0; i < numPops; i++) {
