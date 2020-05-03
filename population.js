@@ -19,38 +19,9 @@ class Population {
     // this.flower = 3;
     this.dna = new DNA()
     for (var i = 0; i < num; i++) {
-      this.population[i] = new Rose(this.dna, this.x + w * 0.5, this.y + w * 0.5, w * .8);
+      this.population[i] = new Rose(this.dna, 0, 0, w * .8);
     }
   }
-
-  // Display all roses
-  // display() {
-  // let rose = floor(random(this.population.length));
-  // this.population[0].display();
-  //   for (var i = 0; i < this.population.length; i++) {
-  //     this.population[i].display();
-  //   }
-  // }
-
-  // displayGrid() {
-  // let rose = floor(random(this.population.length));
-  // this.population[2].display();
-  // for (var i = 0; i < flowerArr.length; i++) {
-  // console.log(this.flower);
-  // this.population[this.flower].display();
-  // }
-  // }
-
-  // Are we rolling over any of the faces?
-  // rollover(mx, my) {
-  //   for (var i = 0; i < this.population.length; i++) {
-  //     let roll = this.population[i].rollover(mx, my);
-
-  //     if (roll) {
-  //       return true;
-  //     }
-  //   }
-  // }
 
   // Generate a mating pool
   selection() {
@@ -95,7 +66,7 @@ class Population {
       child.mutate(this.mutationRate);
 
       // Fill the new population with the new child
-      this.population[i] = new Rose(child, 50 + i * (size * 2 + 10), 60, this.size);
+      this.population[i] = new Rose(child, 0, 0, w * .8);
     }
     this.generations++;
   }

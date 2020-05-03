@@ -115,15 +115,8 @@ class Rose {
   }
 
   // Increment fitness if mouse is rolling over face
-  // rollover(mx, my) {
-  // if (this.r.contains(mx, my)) {
-  // this.rolloverOn = true;
-  // return true;
-  // console.log(mx, my);
-  // this.fitness += 0.25;
-  // } else {
-  // return false;
-  // this.rolloverOn = false;
-  // }
+  addFit() {
+    this.fitness += 0.25;
+  }
   // }
 }

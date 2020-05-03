@@ -13,6 +13,8 @@ class Bed {
     } else {
       this.flower = false;
     }
+
+    // this.blossom = populations[this.pop].population[this.bloom];
   }
 
   display() {
@@ -39,7 +41,11 @@ class Bed {
 
   hover(x, y) {
     if (x > this.x && x < this.x + this.w && y > this.y && y < this.y + this.w) {
-      this.mouseover = true
+      this.mouseover = true;
+      if (this.flower) {
+        //hovering adds fitness
+        populations[this.pop].population[this.bloom].addFit();
+      }
     } else {
       this.mouseover = false
     };
