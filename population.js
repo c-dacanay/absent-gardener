@@ -51,8 +51,8 @@ class Population {
     // Refill the population with children from the mating pool
     for (var i = 0; i < this.population.length; i++) {
       // Sping the wheel of fortune to pick two parents
-      var m = floor(random(this.matingPool.length));
-      var d = floor(random(this.matingPool.length));
+      var m = floor(noise(this.matingPool.length));
+      var d = floor(noise(this.matingPool.length));
       // Pick two parents
       var mom = this.matingPool[m];
       var dad = this.matingPool[d];
@@ -62,9 +62,11 @@ class Population {
       // Mate their genes
       var child = momgenes.crossover(dadgenes);
       // Mutate their genes
-
+      // console.log(mom);
 
       child.mutate(this.mutationRate);
+
+
 
       // Fill the new population with the new child
       this.population[i] = new Rose(child, 0, 0, w * .8, this.color);

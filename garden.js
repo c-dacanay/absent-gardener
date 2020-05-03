@@ -1,17 +1,18 @@
 class Garden {
   constructor(mutationRate_) {
     this.dna = new DNA();
-    this.growing = []
+    this.newGarden = []
+    this.newDNA;
     this.mutationRate = mutationRate_;
-    this.plot = make2DArray(cols, rows);
+    this.plot = make2DArray(cols, rows); //to hold the current population
     for (let i = 0; i < cols; i++) {
       for (let j = 0; j < rows; j++) {
         counter++;
         this.plot[i][j] = new Bed(this.dna, i * w, j * w, w, counter);
       }
     }
-    console.log('this plot:', this.plot);
-    console.log('this dna', this.dna)
+    // console.log('this plot:', this.plot);
+    // console.log('this dna', this.dna)
   }
 
   display() {
@@ -25,33 +26,40 @@ class Garden {
 
   }
 
-  grow() {
-
+  mutate() {
+    // console.log('hi')
+    this.newGarden = [];
     counter = 0;
-    let newGarden = [];
-    // for (var i = 0; i < cols; i++) {
-    // for (let j = 0; j < rows; j++) {
-    newGarden.push(this.dna);
-    // }
+    for (var i = 0; i < cols; i++) {
+      for (let j = 0; j < rows; j++) {
+        this.newGarden.push(this.plot[i][j]);
+        // console.log('here')
+      }
+      console.log(this.newGarden)
+      let m = floor(random(this.newGarden.length));
+      this.newDNA = this.newGarden[8].getDNA();
+      console.log(this.newDNA);
+      // console.log(this.newGarden);
+      // console.log(this.newDNA)
 
-    // }
-    console.log(newGarden)
+      this.newDNA.mutate(this.mutationRate);
 
-    // for (var i = 0; i < cols; i++) {
-    // for (let i = 0; i < newGarden.length; i++) {
-    newGarden[0].mutate(this.mutationRate);
-    // }
-    // }
+      // console.log(this.newDNA);
+    }
 
-    console.log(newGarden)
-    // this.plot = make2DArray(cols, rows);
-    // for (let i = 0; i < cols; i++) {
-    //   for (let j = 0; j < rows; j++) {
-    //     counter++;
-    //     this.plot[i][j] = new Bed(newGarden, i * w, j * w, w, counter);
-    //   }
-    //   console.log('thisplot2', this.plot)
-    // }
+  }
+
+  grow() {
+    // console.log(newGarden)
+    // this.plot = [];
+    this.plot = make2DArray(cols, rows);
+    for (let i = 0; i < cols; i++) {
+      for (let j = 0; j < rows; j++) {
+        counter++;
+        this.plot[i][j] = new Bed(this.newDNA, i * w, j * w, w, counter);
+      }
+      // /  console.log('thisplot2', this.plot)
+    }
 
   }
 }

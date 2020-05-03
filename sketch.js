@@ -66,8 +66,9 @@ function make2DArray(cols, rows) {
 // If the button is clicked, evolve next generation
 function nextGen() {
   for (let i = 0; i < numPops; i++) {
-    // populations[i].selection();
-    // populations[i].reproduction();
+    populations[i].selection();
+    populations[i].reproduction();
+    garden.mutate();
     garden.grow();
     // console.log(garden)
     // console.log(populations[0])

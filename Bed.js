@@ -8,6 +8,7 @@ class Bed {
     this.mouseover = false;
     this.fill = 255;
     let genes = this.dna.genes;
+    // console.log('genes', genes);
     if (genes[this.counter] < 0.8) {
       this.flower = true;
       this.pop = floor(map(genes[this.counter], 0, 1, 0, numPops));
