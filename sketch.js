@@ -22,10 +22,21 @@ let cols;
 let rows;
 let counter = 0;
 //width of cells
-let w = 50;
+let w = 70;
 
 function setup() {
-  createCanvas(601, 601);
+  let width = windowWidth;
+  let height = windowHeight;
+
+  if (width < height) {
+    w = width / numPlots
+  } else {
+    w = height / numplots
+  }
+
+  let square = w * numPlots
+  console.log(square);
+  createCanvas(square, square);
   let mutationRate = 0.04;
 
   //make the garden beds
@@ -42,15 +53,15 @@ function setup() {
 
   button = createButton("evolve new generation");
   button.mousePressed(nextGen);
-  button.position(20, 600);
+  button.position(20, square + 20);
   info = createDiv('');
-  info.position(20, 630);
+  info.position(20, square + 40);
   textAlign(CENTER, CENTER);
 }
 
 function draw() {
 
-  background(150);
+  // background(150);
   garden.display();
 
   info.html("Generation #:" + populations[0].getGenerations());

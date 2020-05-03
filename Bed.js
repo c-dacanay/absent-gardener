@@ -22,6 +22,7 @@ class Bed {
 
   display() {
     stroke(200);
+    strokeWeight(2);
     fill(this.fill);
     rect(this.x, this.y, this.w, this.w);
 
