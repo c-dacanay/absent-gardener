@@ -37,8 +37,9 @@ class DNA {
   // Based on a mutation probability, picks a new random character in array spots
   mutate(m) {
     for (let i = 0; i < this.genes.length; i++) {
+      // console.log('mutating', i);
       if (random(1) < m) {
-        this.genes[i] = noise(0, 1);
+        this.genes[i] = random(0, 1);
       }
     }
   }

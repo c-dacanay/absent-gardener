@@ -35,7 +35,7 @@ class Rose {
     }
 
     //creates the petal colors
-    let c_petal = map(genes[1], 0, 1, 0, this.colors.length);
+    let c_petal = map(genes[0], 0, 1, 0, this.colors.length);
     let petal_color;
     if (c_petal > 4) {
       petal_color = this.colors[floor(c_petal) + floor(this.offset)];
@@ -44,7 +44,7 @@ class Rose {
     }
 
     //other color for stroke
-    let size_stroke = map(genes[2], 0, 1, .09, 1.5);
+    let size_stroke = map(genes[4], 0, 1, .09, 1.5);
     let otherColor = floor(c_petal + this.ran);
     if (otherColor < 0) {
       otherColor = this.colors.length - 2;

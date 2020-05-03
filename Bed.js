@@ -18,7 +18,6 @@ class Bed {
       this.flower = false;
     }
 
-    // this.blossom = populations[this.pop].population[this.bloom];
   }
 
   display() {
@@ -27,7 +26,7 @@ class Bed {
     rect(this.x, this.y, this.w, this.w);
 
     if (this.mouseover) {
-      this.fill = 150;
+      this.fill = 200;
     } else {
       this.fill = 255;
     }

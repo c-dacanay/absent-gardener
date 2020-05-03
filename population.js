@@ -56,16 +56,18 @@ class Population {
       // Pick two parents
       var mom = this.matingPool[m];
       var dad = this.matingPool[d];
+      // console.log(mom);
       // Get their genes
       var momgenes = mom.getDNA();
       var dadgenes = dad.getDNA();
+      // console.log(momgenes);
       // Mate their genes
       var child = momgenes.crossover(dadgenes);
       // Mutate their genes
-      // console.log(mom);
+      // console.log(child);
 
       child.mutate(this.mutationRate);
-
+      // console.log('mutated', child);
 
 
       // Fill the new population with the new child

@@ -26,7 +26,7 @@ let w = 50;
 
 function setup() {
   createCanvas(windowWidth / 2, windowHeight);
-  let mutationRate = 0.8;
+  let mutationRate = 0.04;
 
   //make the garden beds
   cols = floor(numPlots);
@@ -35,7 +35,7 @@ function setup() {
   // console.log(garden);
 
 
-  //make the plant populations
+  //make the plant populations. these are seperate from the garden itself.
   for (let i = 0; i < numPops; i++) {
     populations.push(new Population(mutationRate, popmax));
   }
@@ -50,6 +50,7 @@ function setup() {
 
 function draw() {
 
+  background(150);
   garden.display();
 
   info.html("Generation #:" + populations[0].getGenerations());
@@ -68,10 +69,7 @@ function nextGen() {
   for (let i = 0; i < numPops; i++) {
     populations[i].selection();
     populations[i].reproduction();
-    garden.mutate();
-    garden.grow();
-    // console.log(garden)
-    // console.log(populations[0])
-    // grid = [];
   }
+  garden.change();
+  garden.grow();
 }
