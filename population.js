@@ -11,15 +11,16 @@
 // Create the population
 class Population {
   constructor(m, num) {
-    this.mutationRate = m; // Mutation rate
+    this.mutationRate = m / 2; // Mutation rate
     this.population = []; // array to hold the current population
     this.matingPool = [];
     this.generations = 0; // Number of generations
+    this.color = colorArray[floor(random(colorArray.length))];
     // this.size = size;
     // this.flower = 3;
     this.dna = new DNA()
     for (var i = 0; i < num; i++) {
-      this.population[i] = new Rose(this.dna, 0, 0, w * .8);
+      this.population[i] = new Rose(this.dna, 0, 0, w * .8, this.color);
     }
   }
 
@@ -66,7 +67,7 @@ class Population {
       child.mutate(this.mutationRate);
 
       // Fill the new population with the new child
-      this.population[i] = new Rose(child, 0, 0, w * .8);
+      this.population[i] = new Rose(child, 0, 0, w * .8, this.color);
     }
     this.generations++;
   }

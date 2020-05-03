@@ -1,15 +1,18 @@
 class Bed {
-  constructor(x, y, w) {
+  constructor(dna_, x, y, w, counter_) {
+    this.dna = dna_;
     this.x = x;
     this.y = y;
     this.w = w;
+    this.counter = counter_;
     this.mouseover = false;
-    this.dna = new DNA();
     this.fill = 255;
-    if (random(1) < 0.5) {
+    let genes = this.dna.genes;
+    if (genes[this.counter] < 0.8) {
       this.flower = true;
-      this.pop = floor(random(numPops));
-      this.bloom = floor(random(popmax));
+      this.pop = floor(map(genes[this.counter], 0, 1, 0, numPops));
+      // this.pop = floor(random(numPops));
+      this.bloom = floor(map(genes[this.counter], 0, 1, 0, popmax));
     } else {
       this.flower = false;
     }
@@ -40,6 +43,7 @@ class Bed {
   }
 
   hover(x, y) {
+    // console.log(this.dna);
     if (x > this.x && x < this.x + this.w && y > this.y && y < this.y + this.w) {
       this.mouseover = true;
       if (this.flower) {
@@ -51,5 +55,8 @@ class Bed {
     };
   }
 
+  getDNA() {
+    return this.dna;
+  }
 }
 

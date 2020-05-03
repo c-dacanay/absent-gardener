@@ -8,7 +8,7 @@
 
 // Create a new face
 class Rose {
-  constructor(dna_, x_, y_, size_) {
+  constructor(dna_, x_, y_, size_, colors_) {
     // this.rolloverOn = false; // Are we rolling over this face?
     this.dna = dna_; // rose's DNA
     this.x = x_; // Position on screen
@@ -16,6 +16,7 @@ class Rose {
     this.wh = size_ * 2; // Size of square enclosing face
     this.fitness = 1;
     this.size = size_;
+    this.colors = colors_;
     // this.r = new Rectangle(this.x - this.wh / 2, this.y - this.wh / 2, this.wh, this.wh);
     // this.center = random(colorArray.length);
     this.ran = random(-4);
@@ -34,23 +35,23 @@ class Rose {
     }
 
     //creates the petal colors
-    let c_petal = map(genes[2], 0, 1, 0, colorArray.length);
+    let c_petal = map(genes[1], 0, 1, 0, this.colors.length);
     let petal_color;
     if (c_petal > 4) {
-      petal_color = colorArray[floor(c_petal) + floor(this.offset)];
+      petal_color = this.colors[floor(c_petal) + floor(this.offset)];
     } else {
-      petal_color = colorArray[floor(c_petal)];
+      petal_color = this.colors[floor(c_petal)];
     }
 
     //other color for stroke
     let size_stroke = map(genes[2], 0, 1, .09, 1.5);
     let otherColor = floor(c_petal + this.ran);
     if (otherColor < 0) {
-      otherColor = colorArray.length - 2;
-    } else if (otherColor > colorArray.length) {
-      otherColor = floor(random(colorArray.length));
+      otherColor = this.colors.length - 2;
+    } else if (otherColor > this.colors.length) {
+      otherColor = floor(random(this.colors.length));
     }
-    let c_stroke = colorArray[otherColor];
+    let c_stroke = this.colors[otherColor];
 
     //radius and color for the center circle
     let r_center = map(genes[5], 0, 1, 4, 30) + (this.ran) * 5;
