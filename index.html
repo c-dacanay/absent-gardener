@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="p5.min.js"></script>
+    <script src="views/p5.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
+
   </head>
   <body>
-    <script src="js/dna.js"></script>
-    <script src="js/bed.js"></script>
-    <script src="js/garden.js"></script>
-    <script src="js/rose.js"></script>
-    <script src="js/population.js"></script>
 
     <div class="row debug">
-      <!-- <div class="column debug"> -->
       <div class="column garden debug">
         <iframe
           src="views/sketch.html"
@@ -24,31 +19,19 @@
           height="1000px"
           style="border-style: none;"
         ></iframe>
+        <!-- <script src="views/sketch.js"></script> -->
       </div>
 
       <div class="column content debug">
-        <div class="header debug">
-          <h1>
-            <span id="the">The</span>
-            Absent<br />
-            Gardener
-          </h1>
-        </div>
-        <div class="info debug">
-          <p>Here we put some info bleet bloot</p>
-          <br />
-
-          <button id="tendGarden" class="button color-tran bg-tran">
-            Tend the Garden
-          </button>
-          <button id="tendGarden" class="button color-tran bg-tran">
-            Tend the Garden
-          </button>
-          <button id="tendGarden" class="button color-tran bg-tran">
-            Tend the Garden
-          </button>
+        <p id ="grab"></p>
         </div>
       </div>
     </div>
+    <script src="views/script.js"></script>
+    <script src="views/dna.js"></script>
+    <script src="views/bed.js"></script>
+    <script src="views/garden.js"></script>
+    <script src="views/rose.js"></script>
+    <script src="views/population.js"></script>
   </body>
 </html>
