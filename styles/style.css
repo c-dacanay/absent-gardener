@@ -30,11 +30,37 @@ h1 {
   text-transform: uppercase;
 }
 
+#canvas-destination {
+  margin: autio;
+}
+
 #the {
   font-size: 2.5rem;
   vertical-align: top;
 }
 
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85); /* Black background with opacity */
+  /* z-index: 2; Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  color: #ffffff;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#overlay-text {
+  display: none;
+}
 .row {
   margin-top: 7rem;
   display: flex;
@@ -48,16 +74,18 @@ h1 {
 }
 
 .content {
-  width: 35%;
-  margin-left: 4rem;
-  margin-right: 10%;
+  width: 30%;
+  margin-left: 2rem;
+  margin-right: 20%;
   flex-direction: column;
-  /* text-align: center; */
 }
 
 .garden {
-  width: 35%;
+  width: 32%;
+  /* margin: auto; */
+  flex-direction: column;
   margin-left: 15%;
+  text-align: left;
 }
 
 .header {
@@ -73,6 +101,12 @@ h1 {
 
 .center {
   margin-top: 30%;
+}
+
+#about-garden {
+  text-transform: uppercase;
+  /* margin: auto; */
+  letter-spacing: 0.06rem;
 }
 
 .stop {

@@ -27,8 +27,8 @@ let counter = 0;
 let w = 70;
 
 function setup() {
-  let width = windowWidth;
-  let height = windowHeight;
+  let width = window.innerWidth * .6;
+  let height = window.innerHeight * .6;
 
   if (width < height) {
     w = width / numPlots
@@ -38,7 +38,8 @@ function setup() {
 
   let square = w * numPlots
   // console.log(square);
-  createCanvas(square, square);
+  let myCanvas = createCanvas(square, square);
+  myCanvas.parent("#canvas-destination");
   let mutationRate = 0.04;
 
   //make the garden beds
@@ -58,10 +59,6 @@ function setup() {
   button.position(20, square + 20);
   info = createDiv('');
   info.position(20, square + 40);
-  aboutButton = createP("About the Garden");
-  aboutButton.addClass('stop')
-  aboutButton.mousePressed(tendGarden);
-  aboutButton.position(20, square + 60);
   textAlign(CENTER, CENTER);
 }
 

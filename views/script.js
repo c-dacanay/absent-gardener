@@ -67,28 +67,13 @@ function stopGardening() {
   `
 }
 
+function aboutGarden() {
+  document.getElementById("overlay").style.display = "flex";
+  document.getElementById("overlay-text").style.display = "block";
+}
 
-// function introScreen() {
-//   console.log(element);
-//   element = `
-//   <div class="header debug">
-//   <h1>
-//     <span id="the">The</span>
-//     Absent<br />
-//     Gardener
-//   </h1>
-// </div>
-// <div class="info debug">
-//   <p>Here we put some info bleet bloot</p>
-//   <br />
+function aboutGardenOff() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("overlay-text").style.display = "none";
+}
 
-//   <button id="tendGarden" class="button color-tran bg-tran">
-//     Tend the Garden
-//   </button>
-//   <button id="tendGarden" class="button color-tran bg-tran">
-//     Tend the Garden
-//   </button>
-//   <button id="tendGarden" class="button color-tran bg-tran">
-//     Tend the Garden
-//   </button>`;
-// }
