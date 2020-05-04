@@ -27,7 +27,7 @@ class Garden {
 
     //take this DNA and mutate it slightly
     this.newGarden = this.dna;
-    this.newGarden.mutate(this.mutationRate / 2);
+    this.newGarden.mutate(this.mutationRate);
   }
 
   grow() {

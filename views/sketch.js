@@ -16,6 +16,8 @@ let populations = [];
 let numPops = 3;
 let popmax = 12;
 let numPlots = 12;
+let button;
+let aboutButton;
 let garden;
 let grid;
 let cols;
@@ -31,11 +33,11 @@ function setup() {
   if (width < height) {
     w = width / numPlots
   } else {
-    w = height / numplots
+    w = height / numPlots
   }
 
   let square = w * numPlots
-  console.log(square);
+  // console.log(square);
   createCanvas(square, square);
   let mutationRate = 0.04;
 
@@ -56,6 +58,10 @@ function setup() {
   button.position(20, square + 20);
   info = createDiv('');
   info.position(20, square + 40);
+  aboutButton = createP("About the Garden");
+  aboutButton.addClass('stop')
+  aboutButton.mousePressed(tendGarden);
+  aboutButton.position(20, square + 60);
   textAlign(CENTER, CENTER);
 }
 
