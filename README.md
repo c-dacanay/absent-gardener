@@ -14,9 +14,13 @@ After lots of brainstorming and amorphous pondering I really began with a paper 
 
 I pulled the colors from [nice-color-palettes](https://www.npmjs.com/package/nice-color-palettes) so the flowers would be a bit more cohesive. After developing the variety in populations of roses I moved to a grid-based system where each cell had a random rose from a random population of flowers. There are currently 3 populations max.
 
-<img src=“https://github.com/c-dacanay/absent-gardener/blob/master/images/1populations.png”>
+![Pop](https://github.com/c-dacanay/absent-gardener/blob/master/images/1populations.png)
+![Grid](https://github.com/c-dacanay/absent-gardener/blob/master/images/1grid.png)
+![Popgrid](https://github.com/c-dacanay/absent-gardener/blob/master/images/1popgrids.png)
+
+<!-- <img src=“https://github.com/c-dacanay/absent-gardener/blob/master/images/1populations.png”>
 <img src=“https://github.com/c-dacanay/absent-gardener/blob/master/images/1grid.png”>
-<img src=“https://github.com/c-dacanay/absent-gardener/blob/master/images/1popgrids.png”>
+<img src=“”> -->
 
 It's getting a little late so I might have to edit this in the morning, but this is very much version .5 of the absent gardener. I fully intend on continuing to work on this project, and it has been immensely satisfying to see parts of it come together!
 
