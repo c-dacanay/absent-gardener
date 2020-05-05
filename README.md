@@ -6,7 +6,14 @@ The Absent Gardener is a small interactive browser experience about tending a di
 
 #### Process
 
-<img src="https://github.com/c-dacanay/absent-gardener/blob/master/images/wireframe.JPG" width="400" text-align="top"> Bleet Bloop
+<img src="https://github.com/c-dacanay/absent-gardener/blob/master/images/wireframe.JPG" width="400" text-align="top"> 
+After lots of brainstorming and amorphous pondering I really began with a paper prototype to structure the experience. I later fleshed this out in Figma for a more hi-res experience. After receiving some feedback on the prototypes I began coding from what I thought was the most important thing: the flowers.
+
+![Flower Img](https://github.com/c-dacanay/absent-gardener/blob/master/images/0polar.png)
+
+I pulled the colors from [nice-color-palettes](https://www.npmjs.com/package/nice-color-palettes) so the flowers would be a bit more cohesive. After developing the variety in populations of roses I moved to a grid-based system where each cell had a random rose from a random population of flowers. There are currently 3 populations max.
+
+<img src=“https://github.com/c-dacanay/absent-gardener/blob/master/images/1populations.png” width=“200”><img src=“https://github.com/c-dacanay/absent-gardener/blob/master/images/1grid.png” width=“200”><img src=“https://github.com/c-dacanay/absent-gardener/blob/master/images/1popgrids.png” width=“200”>
 
 <!-- ![Wireframe](https://github.com/c-dacanay/dwd-beautiful-day/blob/master/process/figma.png) -->
 
