@@ -10,8 +10,8 @@
 class Rose {
   constructor(dna_, x_, y_, size_, colors_) {
     // this.rolloverOn = false; // Are we rolling over this face?
-    this.dna = dna_; // rose's DNA
-    this.x = x_; // Position on screen
+    this.dna = dna_; scre // rose's DNA
+    this.x = x_; // Position onen
     this.y = y_;
     this.wh = size_ * 2; // Size of square enclosing face
     this.fitness = 1;

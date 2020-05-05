@@ -60,12 +60,12 @@ function setup() {
     populations.push(new Population(mutationRate, popmax));
   }
 
-  button = createButton("evolve new generation");
-  button.mousePressed(nextGen);
-  button.position(20, square + 20);
-  info = createDiv('');
-  info.position(20, square + 40);
-  textAlign(CENTER, CENTER);
+  // button = createButton("evolve new generation");
+  // button.mousePressed(nextGen);
+  // button.position(20, square + 20);
+  // info = createDiv('');
+  // info.position(20, square + 40);
+  // textAlign(CENTER, CENTER);
 }
 
 function draw() {
@@ -74,7 +74,7 @@ function draw() {
   // background(150);
   garden.display();
 
-  info.html("Generation #:" + populations[0].getGenerations());
+  // info.html("Generation #:" + populations[0].getGenerations());
 }
 
 function make2DArray(cols, rows) {
