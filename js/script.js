@@ -21,9 +21,11 @@ function introScreen() {
   </h1>
   </div>
   <div class="info debug">
-  <p>Here we put some info bleet bloot</p>
-  <p>Here's s'more information</p>
-  <p>Wow! Nice garden you have.</p>
+  <p>This project is currently very under construction!</p>
+  <p>'About the Garden works'</p>
+  <p>So does pruning plants</p>
+  <p>That's about it though!</p>
+  <p>Have a great day.<3</p>
   <br />
   
   <button id="tendGarden" class="button color-tran bg-tran" onclick="tendGarden()">

@@ -1,6 +1,6 @@
 <!-- Every README should start with an H1 -->
 
-### The Absent Gardener
+### The Absent Gardener v .04
 
 The Absent Gardener is a small interactive browser experience about tending a digital garden, and seeing how it grows.
 
@@ -22,7 +22,7 @@ I pulled the colors from [nice-color-palettes](https://www.npmjs.com/package/nic
 <img src=“https://github.com/c-dacanay/absent-gardener/blob/master/images/1grid.png”>
 <img src=“”> -->
 
-It's getting a little late so I might have to edit this in the morning, but this is very much version .5 of the absent gardener. I fully intend on continuing to work on this project, and it has been immensely satisfying to see parts of it come together!
+It's getting a little late so I might have to edit this in the morning, but this is very much version .0s5 of the absent gardener. I fully intend on continuing to work on this project, and it has been immensely satisfying to see parts of it come together!
 
 <!-- ![Wireframe](https://github.com/c-dacanay/dwd-beautiful-day/blob/master/process/figma.png) -->
 
@@ -54,7 +54,7 @@ The tone of this piece is heavily influenced by [The Quiet Year](https://buriedw
 
 #### Glitch
 
-<!-- This project [is hosted on Glitch.](https://c-dacanay-dwd-beautiful-day.glitch.me/) -->
+This project [is hosted on Glitch.](https://c-dacanay-absent-gardener.glitch.me/)
 
 #### Built with
 
