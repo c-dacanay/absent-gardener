@@ -6,7 +6,7 @@ The Absent Gardener is a small interactive browser experience about tending a di
 
 #### Process
 
-<img src="https://github.com/c-dacanay/absent-gardener/blob/master/images/wireframe.JPG" width="200">
+<img src="https://github.com/c-dacanay/absent-gardener/blob/master/images/wireframe.JPG" width="400"> Bleet Bloop
 
 <!-- ![Wireframe](https://github.com/c-dacanay/dwd-beautiful-day/blob/master/process/figma.png) -->
 
