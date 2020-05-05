@@ -13,9 +13,11 @@ After lots of brainstorming and amorphous pondering I really began with a paper 
 
 I pulled the colors from [nice-color-palettes](https://www.npmjs.com/package/nice-color-palettes) so the flowers would be a bit more cohesive. After developing the variety in populations of roses I moved to a grid-based system where each cell had a random rose from a random population of flowers. There are currently 3 populations max.
 
-<img src=“https://github.com/c-dacanay/absent-gardener/blob/master/images/1populations.png” width=“200”><img src=“https://github.com/c-dacanay/absent-gardener/blob/master/images/1grid.png” width=“200”><img src=“https://github.com/c-dacanay/absent-gardener/blob/master/images/1popgrids.png” width=“200”>
+<img src=“https://github.com/c-dacanay/absent-gardener/blob/master/images/1populations.png” width=“200”> 
+<img src=“https://github.com/c-dacanay/absent-gardener/blob/master/images/1grid.png” width=“200”>
+<img src=“https://github.com/c-dacanay/absent-gardener/blob/master/images/1popgrids.png” width=“200”>
 
-<!-- ![Wireframe](https://github.com/c-dacanay/dwd-beautiful-day/blob/master/process/figma.png) -->
+<!-- ![Wireframe](https://github.com/c-dacanay/dwd-beautiful-day/blob/master/process/figma.png) -->s
 
 <!-- It is essential to describe how to set up your project -->
 
