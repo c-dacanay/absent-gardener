@@ -9,7 +9,7 @@ class Bed {
     this.fill = 255;
     let genes = this.dna.genes;
     // console.log('genes', genes);
-    if (genes[this.counter] < 0.8) {
+    if (genes[this.counter] < 0.67) {
       this.flower = true;
       this.pop = floor(map(genes[this.counter], 0, 1, 0, numPops));
       // this.pop = floor(random(numPops));
@@ -47,10 +47,34 @@ class Bed {
     // console.log(this.dna);
     if (x > this.x && x < this.x + this.w && y > this.y && y < this.y + this.w) {
       this.mouseover = true;
+
+
       if (this.flower) {
         //hovering adds fitness
         populations[this.pop].population[this.bloom].addFit();
-      }
+
+
+        //if clicking on a flower...d
+        if (this.mouseover && mouseIsPressed) {
+          //prune and turn off flower
+          if (pruneOn) {
+            console.log("prune!");
+            this.flower = false;
+          };
+          //harvest flower
+          if (harvestOn) {
+            console.log("harvesting!");
+
+
+            // let seed = populations[this.pop].population[this.bloom].seed();
+            // seed.parent("#seed1")
+            // console.log(seed)
+            // image(seed, 0, 0);
+          };
+        }
+
+
+      } else { return };
     } else {
       this.mouseover = false
     };

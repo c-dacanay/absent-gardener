@@ -106,6 +106,11 @@ class Rose {
     // text('' + floor(this.fitness), this.x, this.y + 55);
   }
 
+  seed() {
+    return this.canvas;
+    image(this.canvas, 0, 0)
+  }
+
   getFitness() {
     this.fitness = random(0, 1);
     return this.fitness;

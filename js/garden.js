@@ -2,7 +2,7 @@ class Garden {
   constructor(mutationRate_) {
     this.dna = new DNA();
     this.newGarden;
-    this.newDNA;
+    this.newDNA = [];
     this.mutationRate = mutationRate_;
     this.plot = make2DArray(cols, rows); //to hold the current population
     for (let i = 0; i < cols; i++) {
@@ -18,6 +18,7 @@ class Garden {
       for (let j = 0; j < rows; j++) {
         this.plot[i][j].hover(mouseX, mouseY);
         this.plot[i][j].display();
+
       }
     }
   }
@@ -28,6 +29,18 @@ class Garden {
     //take this DNA and mutate it slightly
     this.newGarden = this.dna;
     this.newGarden.mutate(this.mutationRate);
+  }
+
+  changeDNA() {
+    for (var i = 0; i < cols; i++) {
+      for (let j = 0; j < rows; j++) {
+        this.newDNA.push(this.plot[i][j].getDNA());
+      }
+    }
+    console.log(this.newDNA);
+    this.newGarden = this.dna;
+    // console.log(this.newGarden);
+    // this.newDNA 
   }
 
   grow() {

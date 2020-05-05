@@ -31,7 +31,8 @@ h1 {
 }
 
 #canvas-destination {
-  margin: autio;
+  /* margin: auto; */
+  width: 20%;
 }
 
 #the {
@@ -59,6 +60,7 @@ h1 {
 }
 
 #overlay-text {
+  margin: auto;
   display: none;
 }
 .row {
@@ -70,10 +72,11 @@ h1 {
 }
 
 .column {
-  display: inline-flex;
+  display: inline-block;
 }
 
 .content {
+  display: block;
   width: 30%;
   margin-left: 2rem;
   margin-right: 20%;

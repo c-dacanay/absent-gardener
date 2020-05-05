@@ -23,10 +23,16 @@ let grid;
 let cols;
 let rows;
 let counter = 0;
+let seedCount = 0;
+let pruneOn = false;
+let harvestOn = false;
 //width of cells
 let w = 70;
+let square = 1;
 
 function setup() {
+
+  // console.log(square);
   let width = window.innerWidth * .6;
   let height = window.innerHeight * .6;
 
@@ -36,10 +42,10 @@ function setup() {
     w = height / numPlots
   }
 
-  let square = w * numPlots
-  // console.log(square);
+  square = w * numPlots
   let myCanvas = createCanvas(square, square);
   myCanvas.parent("#canvas-destination");
+  console.log(myCanvas);
   let mutationRate = 0.04;
 
   //make the garden beds
@@ -64,6 +70,7 @@ function setup() {
 
 function draw() {
 
+  // console.log(width, height)
   // background(150);
   garden.display();
 
@@ -84,6 +91,7 @@ function nextGen() {
     populations[i].selection();
     populations[i].reproduction();
   }
-  garden.change();
-  garden.grow();
+  garden.changeDNA();
+  // garden.change();
+  // garden.grow();
 }
