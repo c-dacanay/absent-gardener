@@ -6,9 +6,9 @@ The Absent Gardener is a small interactive browser experience about tending a di
 
 #### Process
 
-I used Figma to create a sketch of the website with placeholder copy. The fact that I didn't fine tune the spacing at this stage meant that I lost a lot of time in the code. During the poster project, the meticulous measurements really paid of when I got to coding. I also didn't think carefully about what elements would be dynamic and responsive. Rushing this step meant that I was tweaking for a long time.
+<img src="https://github.com/c-dacanay/absent-gardener/blob/master/images/wireframe.JPG" width="200">
 
-![Wireframe](https://github.com/c-dacanay/dwd-beautiful-day/blob/master/process/figma.png)
+<!-- ![Wireframe](https://github.com/c-dacanay/dwd-beautiful-day/blob/master/process/figma.png) -->
 
 <!-- It is essential to describe how to set up your project -->
 
