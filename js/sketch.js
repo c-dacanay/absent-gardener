@@ -26,13 +26,13 @@ let counter = 0;
 let seedCount = 0;
 let pruneOn = false;
 let harvestOn = false;
+
 //width of cells
 let w = 70;
 let square = 1;
 
 function setup() {
 
-  // console.log(square);
   let width = window.innerWidth * .6;
   let height = window.innerHeight * .6;
 
@@ -43,9 +43,11 @@ function setup() {
   }
 
   square = w * numPlots
+
+  //myCanvas allows there to be an canvas that the DOM can access
   let myCanvas = createCanvas(square, square);
   myCanvas.parent("#canvas-destination");
-  console.log(myCanvas);
+  // console.log("My Canvas", myCanvas);
   let mutationRate = 0.04;
 
   //make the garden beds
@@ -69,12 +71,7 @@ function setup() {
 }
 
 function draw() {
-
-  // console.log(width, height)
-  // background(150);
   garden.display();
-
-  // info.html("Generation #:" + populations[0].getGenerations());
 }
 
 function make2DArray(cols, rows) {
@@ -85,6 +82,7 @@ function make2DArray(cols, rows) {
   return arr;
 }
 
+//This nextGen function does not currently work.
 // If the button is clicked, evolve next generation
 function nextGen() {
   for (let i = 0; i < numPops; i++) {
