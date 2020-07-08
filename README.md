@@ -32,10 +32,12 @@ It's getting a little late so I might have to edit this in the morning, but this
 
 ##### GA
 
-- I have to draw a flowchart!
+~- I have to draw a flowchart!~ Done 7.7—it's confusing.
+
 - The DNA of the garden has to change through user interaction
   - prunePlant() works visually right now, but it is not persistent and will not evolve with the garden.
-- Each plot (bed.js) must have access to its place in the array of the population
+    ~- Each plot (bed.js) must have access to its place in the array of the population~ I think this is incorrect. The bed merely decides if it is displaying a flower or not. The garden needs to know what beds are turned on or off. The evolution should, I think, still be genetic?
+- Look into Game of Life???
 - Make mutations of flowers (petal number, color, center size) more natural. My full obsessive version of this might have cherry picked color arrays.
 - Create slow animation of garden mutating over x years
 
