@@ -74,6 +74,11 @@ function draw() {
   garden.display();
 }
 
+// function mousePressed() {
+//   garden.change();
+//   garden.grow();
+// }
+
 function make2DArray(cols, rows) {
   var arr = new Array(cols);
   for (var i = 0; i < arr.length; i++) {
@@ -82,7 +87,7 @@ function make2DArray(cols, rows) {
   return arr;
 }
 
-//This nextGen function does not currently work.
+//This nextGen function does not currently work.s
 // If the button is clicked, evolve next generation
 function nextGen() {
   for (let i = 0; i < numPops; i++) {

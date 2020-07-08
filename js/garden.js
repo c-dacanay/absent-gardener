@@ -25,13 +25,14 @@ class Garden {
 
   change() {
     //I need to get the DNA from the plots themselves I think...
-
-    //take this DNA and mutate it slightly
+    //take this DNA and mutate it slightly.
+    //This changes where the flowers are on the plots.
     this.newGarden = this.dna;
     this.newGarden.mutate(this.mutationRate);
   }
 
   changeDNA() {
+    //I think this one is pushing the plot's DNA, but the plot's DNA isn't mutated??
     for (var i = 0; i < cols; i++) {
       for (let j = 0; j < rows; j++) {
         this.newDNA.push(this.plot[i][j].getDNA());

@@ -9,10 +9,11 @@ class Bed {
     this.fill = 255;
     let genes = this.dna.genes;
     // console.log('genes', genes);
+    //This is basically just creating a very sense of randomness using a counter that gets pushed into an array
+    //It only controlls if a flower blooms or not
     if (genes[this.counter] < 0.67) {
       this.flower = true;
       this.pop = floor(map(genes[this.counter], 0, 1, 0, numPops));
-      // this.pop = floor(random(numPops));
       this.bloom = floor(map(genes[this.counter], 0, 1, 0, popmax));
     } else {
       this.flower = false;
@@ -33,7 +34,6 @@ class Bed {
     }
 
     if (this.flower) {
-
       push();
       translate(this.x + w / 2, this.y + w / 2)
       //pick a flower randomly from the array of populations
@@ -47,8 +47,6 @@ class Bed {
     // console.log(this.dna);
     if (x > this.x && x < this.x + this.w && y > this.y && y < this.y + this.w) {
       this.mouseover = true;
-
-
       if (this.flower) {
         //hovering adds fitness
         populations[this.pop].population[this.bloom].addFit();
@@ -64,15 +62,12 @@ class Bed {
           //harvest flower
           if (harvestOn) {
             console.log("harvesting!");
-
-
-            // let seed = populations[this.pop].population[this.bloom].seed();
-            // seed.parent("#seed1")
-            // console.log(seed)
+            let seed = populations[this.pop].population[this.bloom].seed();
+            seed.parent("#seed1")
+            console.log(seed)
             // image(seed, 0, 0);
           };
         }
-
 
       } else { return };
     } else {

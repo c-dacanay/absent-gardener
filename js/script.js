@@ -1,3 +1,9 @@
+// The Nature of Code by Daniel Shiffman
+// http://natureofcode.com
+
+// Interactive Selection
+// http://www.genarts.com/karl/papers/siggraph91.html
+
 let content = document.getElementById("grab");
 let tendGardenButton;
 
@@ -36,13 +42,12 @@ function introScreen() {
 
 function tendGarden() {
   checkAbil();
-
   content.innerHTML = ` 
   <div class="center">
   <button id="prunePlant" class="button color-tran bg-tran" onclick="pruneGarden()">
   Prune Plant
   </button>
-  <button id="harvestSeeds" class="button color-tran bg-tran" onclick="tendGarden()">
+  <button id="harvestSeeds" class="button color-tran bg-tran" onclick="harvestSeeds()">
   Harvest Seeds
   </button>
   <br>
@@ -69,10 +74,9 @@ function pruneGarden() {
 }
 
 function harvestSeeds() {
-  // checkAbil();
+  checkAbil();
   harvestOn = true;
   content.innerHTML = ` 
-
   <div class="center">
   <div id="seed1"></div>
   <p>Harvest seeds baby!</p>
@@ -127,6 +131,8 @@ function aboutGardenOff() {
   document.getElementById("overlay-text").style.display = "none";
 }
 
+
+//resets all abilities
 function checkAbil() {
   pruneOn = false;
   harvestOn = false;
